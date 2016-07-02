@@ -42,7 +42,7 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // sorting the array based on date locations updated:
-        let sortedLocationsArray = StudentLocation.locations.sort({$1.updatedAt > $0.updatedAt })
+        let sortedLocationsArray = StudentLocation.locations.sort({$1.updatedAt < $0.updatedAt })
         
         let cell = tableView.dequeueReusableCellWithIdentifier("TableCell", forIndexPath: indexPath)
         let name = sortedLocationsArray[indexPath.row].firstName! + " " + sortedLocationsArray[indexPath.row].lastName!
