@@ -32,8 +32,8 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
         
         
         //Checking to see if Location has changed here...
-        print ("Checking Location in Sharing, Change in Location....")
-        print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+        print ("Break......")
+        print ("Checking Location in Sharing....")
         print (newLocation)
         print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         
@@ -71,9 +71,8 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
     @IBAction func submitButtonTapped(sender: UIButton) {
         
         //Checking New Location....
+        print ("Break.......")
         print ("Button Tapped on Final Submit....")
-        print ("New Location Check...............")
-        print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         print (newLocation)
         print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         

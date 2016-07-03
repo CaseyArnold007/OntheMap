@@ -95,9 +95,9 @@ class LocationConfirmationViewController: UIViewController, MKMapViewDelegate {
             
             //Checking to see if Information has processed....
             print ("Break.....")
-            print ("Checking Location...")
-            print ("XXXXXXXXXXXXXXXXXXXX")
+            print ("Checking Location Confirmation...")
             print (self.oldLocation)
+            print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         }
     }
     

@@ -148,10 +148,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                                 
                                 //Checking Optionals....
                                 print ("Checking Optionals...")
+                                print ("XXXXXXXXXXXXXXXXXXXXX")
                                 print (student.mediaURL)
                                 print (student.mapString)
                                 print (student.firstName)
                                 print (student.lastName)
+                                print ("XXXXXXXXXXXXXXXXXXXXX")
                             })
                         }))
                         dispatch_async(dispatch_get_main_queue(), {
