@@ -92,6 +92,14 @@ class LocationConfirmationViewController: UIViewController, MKMapViewDelegate {
             shareLocationVC.latitude = self.latitude
             shareLocationVC.longitude = self.longitude
             shareLocationVC.oldLocation = self.oldLocation
+            
+            //Checking to see if Information has processed....
+            print ("Break.....")
+            print ("Checking Location...")
+            print ("XXXXXXXXXXXXXXXXXXXX")
+            print (self.latitude)
+            print (self.longitude)
+            print (self.oldLocation)
         }
     }
     

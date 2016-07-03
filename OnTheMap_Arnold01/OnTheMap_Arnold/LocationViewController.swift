@@ -71,6 +71,13 @@ class LocationViewController: UIViewController, UITextFieldDelegate {
                 confirmLocationVC.editingOldLocation = self.editingOldLocation
                 confirmLocationVC.locationString = locationStringTextField.text!
                 confirmLocationVC.oldLocation = self.oldLocation
+                
+                
+                //Checking Old Location....
+                print ("Break....")
+                print ("Checking Old Location....")
+                print (self.oldLocation)
+                
             } else {
                 presentMessage(self, title: "No Location", message: "No location typed, Please enter your location and try again", action: "OK")
             }

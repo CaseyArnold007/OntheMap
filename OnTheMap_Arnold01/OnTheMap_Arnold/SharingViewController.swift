@@ -31,6 +31,12 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
         newLocation?.longitude = self.longitude
         
         
+        //Checking to see if Location has changed here...
+        print ("Checking Location in Sharing....")
+        print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+        print (newLocation)
+        
+        
         urlStringTextField.delegate = self
         
         
