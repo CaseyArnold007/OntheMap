@@ -22,15 +22,15 @@ class LocationViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // set textfield delegate
+       
         locationStringTextField.delegate = self
         
-        // set text fields style
+     
         let emailPaddingView = UITextField(frame: CGRectMake(0, 0, 30, 0))
         locationStringTextField.leftView = emailPaddingView
         locationStringTextField.leftViewMode = UITextFieldViewMode.Always
         
-        //Looks for single or multiple taps to dismiss keyboard:
+       
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
         
@@ -42,7 +42,7 @@ class LocationViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    //MARK: findLocationButtonTapped
+  
     @IBAction func findLocationButtonTapped(sender: UIButton) {
         
         geoLoactionSpinner.startAnimating()
@@ -56,13 +56,13 @@ class LocationViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //MARK: cancelButtonTapped
+  
     @IBAction func cancelButtonTapped(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     
-    //MARK: prepareForSegue
+   
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toConfirmMapVCSegue" {
             let confirmLocationVC = segue.destinationViewController as! LocationConfirmationViewController
@@ -78,9 +78,9 @@ class LocationViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    //MARK: DismissKeyboard method:
+    
     func DismissKeyboard(){
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+     
         view.endEditing(true)
     }
     

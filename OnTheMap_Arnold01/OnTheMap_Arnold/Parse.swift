@@ -11,7 +11,7 @@ import Foundation
 
 class Parse {
     
-    //MARK: getLocations
+    //Getting Locations
     class func getLocations(didComplete: (success: Bool, status: String?, locationsArray: [StudentLocation]?) -> Void) {
         
         let request = NSMutableURLRequest(URL: NSURL(string: Constants.ParseBaseLink + ParseMethodNames.StudentLocation + "?limit=\(Constants.ParseResultsLimit)")!)
@@ -49,7 +49,7 @@ class Parse {
     }
     
     
-    //MARK: addLocation
+    //Adding A Location
     class func addLocation(user: StudentLocation, didComplete: (success: Bool, status: String?) -> Void) {
         
         let request = NSMutableURLRequest(URL: NSURL(string: Constants.ParseBaseLink + ParseMethodNames.StudentLocation)!)
@@ -88,7 +88,7 @@ class Parse {
         task.resume()
     }
     
-    //MARK: queryLocation
+    //Query A Location
     class func queryLocation(uniqueKey: String, didComplete: (success: Bool, status: String?, location: StudentLocation?) -> Void) {
         
         let urlString = Constants.ParseBaseLink + ParseMethodNames.StudentLocation + "?where=%7B%22uniqueKey%22%3A%22" + uniqueKey + "%22%7D"
@@ -128,7 +128,7 @@ class Parse {
     }
     
     
-    //MARK: updateStudentLocation
+    //Updating A Location
     class func updateStudentLocation (old: StudentLocation, new: StudentLocation, didComplete:(success: Bool, status: String?) -> Void) {
         
         let urlString = Constants.ParseBaseLink + ParseMethodNames.StudentLocation
@@ -179,7 +179,7 @@ class Parse {
     }
     
     
-    //MARK: checkIfLocationAlreadyAdded
+    //Has A Location Been Added???
     class func checkIfLocationAlreadyAdded(lastName: String, didComplete: (found: Bool, studentLocation: StudentLocation?) -> Void) {
         
         getLocations { (success, status, locationsArray) -> Void in

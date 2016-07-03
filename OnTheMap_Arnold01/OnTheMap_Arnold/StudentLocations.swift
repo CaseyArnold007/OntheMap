@@ -8,11 +8,10 @@
 
 import Foundation
 
-//TODO: import NSDate from String using NSDateFormatter
 
 struct StudentLocation {
     
-    // shared locations singleton
+    
     static var locations: [StudentLocation] = []
     
     var createdAt: String?
@@ -40,8 +39,7 @@ struct StudentLocation {
     }
     
     
-    // Helper: Given an array of dictionaries, convert them to an array of StudentLocation objects
-    static func locationsFromResults(results: [[String : AnyObject]]) -> [StudentLocation] {
+        static func locationsFromResults(results: [[String : AnyObject]]) -> [StudentLocation] {
         var locations = [StudentLocation]()
         
         for result in results {

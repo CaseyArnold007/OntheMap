@@ -27,7 +27,7 @@ class LocationConfirmationViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //set mapView delegate
+    
         mapView.delegate = self
         
         mapView.alpha = 0.3
@@ -65,25 +65,25 @@ class LocationConfirmationViewController: UIViewController, MKMapViewDelegate {
             
         })
         
-        //Looks for single or multiple taps to dismiss keyboard:
+     
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
     }
     
     
-    //MARK: submitLocationButtonTapped
+  
     @IBAction func submitLocationButtonTapped(sender: UIButton) {
         performSegueWithIdentifier("toShareLocationVCSegue", sender: self)
     }
     
     
-    //MARK: cancelButtonTapped
+  
     @IBAction func cancelButtonTapped(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     
-    //MARK: prepareForSegue
+ 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toShareLocationVCSegue" {
             let shareLocationVC = segue.destinationViewController as! SharingViewController
@@ -96,9 +96,9 @@ class LocationConfirmationViewController: UIViewController, MKMapViewDelegate {
     }
     
     
-    //MARK: DismissKeyboard method:
+   
     func DismissKeyboard(){
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        
         view.endEditing(true)
     }
     

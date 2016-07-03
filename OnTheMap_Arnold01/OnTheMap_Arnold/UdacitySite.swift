@@ -10,7 +10,7 @@ import Foundation
 
 class Udacity {
     
-    //MARK: login
+    //Login
     class func login(username: String, password: String, didComplete: (success: Bool, status: String?, userID: String?) -> Void) {
         
         let request = NSMutableURLRequest(URL: NSURL(string: Constants.UdacityBaseLink + UdacityMethodNames.Session)!)
@@ -37,7 +37,7 @@ class Udacity {
                 let userID = account["key"] as? String
                 didComplete(success: true, status: nil, userID: userID)
                 
-                // save userID for faster use later in application
+                
                 userDefaults.setObject(userID!, forKey: "userID")
                 
             } catch {
@@ -51,7 +51,7 @@ class Udacity {
     }
     
     
-    //MARK: logout
+    //Logout
     class func logout(didComplete: (success: Bool, status: String?) -> Void) {
         
         let request = NSMutableURLRequest(URL: NSURL(string: Constants.UdacityBaseLink + UdacityMethodNames.Session)!)
@@ -98,7 +98,7 @@ class Udacity {
     }
     
     
-    // getUserLastName
+    //Last Name
     class func getUserName(didComplete: (success: Bool, status: String?, userFirstName: String?, userLastName: String?) -> Void) {
         
         if let userId = NSUserDefaults.standardUserDefaults().valueForKey("userID") as? String {

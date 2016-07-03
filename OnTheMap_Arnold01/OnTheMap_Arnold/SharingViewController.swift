@@ -30,20 +30,20 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
         newLocation?.latitude = self.latitude
         newLocation?.longitude = self.longitude
         
-        // set textfield delegate
+        
         urlStringTextField.delegate = self
         
-        // set text fields style
+        
         let emailPaddingView = UITextField(frame: CGRectMake(0, 0, 30, 0))
         urlStringTextField.leftView = emailPaddingView
         urlStringTextField.leftViewMode = UITextFieldViewMode.Always
         
-        //Looks for single or multiple taps to dismiss keyboard:
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
     }
     
-    // move from textfield to another when tapping return
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
         if urlStringTextField.text!.rangeOfString(".") == nil {
@@ -118,9 +118,9 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    //MARK: DismissKeyboard method:
+    
     func DismissKeyboard(){
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        
         view.endEditing(true)
     }
     

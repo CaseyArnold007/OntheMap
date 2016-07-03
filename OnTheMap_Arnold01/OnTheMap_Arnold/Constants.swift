@@ -10,11 +10,11 @@ import Foundation
 
 struct Constants {
     
-    // MARK: - Base Links
+    
     static let UdacityBaseLink = "https://www.udacity.com/api/"
     static let ParseBaseLink = "https://api.parse.com/1/classes/"
     
-    // MARK: - Keys
+    
     static let ParseApplicationID = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
     static let RESTAPIKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
     
@@ -36,7 +36,7 @@ struct UdacityMethodNames {
 }
 
 
-// MARK: - Parse JSON Body Keys
+
 struct ParseJSONBodyKeys {
     static let UniqueKey = "uniqueKey"
     static let FirstName = "firstName"

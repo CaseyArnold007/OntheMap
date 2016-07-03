@@ -22,15 +22,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Hiding Spinner and Password Text Entry
+       
         loginSpinner.hidden = true
         passwordTextField.secureTextEntry = true
         
-        // set text fields delegates
+      
         usernameTextField.delegate = self
         passwordTextField.delegate = self
         
-        // set text fields style
+      
         let emailPaddingView = UITextField(frame: CGRectMake(0, 0, 10, 0))
         usernameTextField.leftView = emailPaddingView
         usernameTextField.leftViewMode = UITextFieldViewMode.Always
@@ -40,16 +40,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         usernameTextField.tintColor = UIColor.orangeColor()
         passwordTextField.tintColor = UIColor.orangeColor()
         
-        //Looks for single or multiple taps to dismiss keyboard:
+    
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
         view.addGestureRecognizer(tap)
         
     }
     
-    // move from textfield to another when tapping return
+  
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if usernameTextField.isFirstResponder() {
-            // check if email contains '@' and '.' chracters:
+           
             if (usernameTextField.text!.rangeOfString("@") == nil || usernameTextField.text!.rangeOfString(".") == nil) {
                 presentMessage(self, title: "Invalid Email Address", message: "\(usernameTextField.text!) is Not A Valid Email Address", action: "Try Again")
             } else {
@@ -62,18 +62,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    //MARK: DismissKeyboard method:
+   
     func DismissKeyboard(){
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+      
         view.endEditing(true)
     }
     
-    // MARK: Login
+   
     @IBAction func loginButtonTapped(sender: UIButton) {
         
         view.endEditing(true)
         
-        // check if username and password text fields are empty
+       
         if usernameTextField.text?.isEmpty == true || passwordTextField.text?.isEmpty == true {
             presentMessage(self, title: "No Email and/or Password", message: "Please Enter Your Email and Password", action: "OK")
         }
@@ -96,15 +96,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         return
                     }
                     
-                    // fetching user's last name for later use
+                  
                     Udacity.getUserName({ (success, status, userFirstName, userLastName) -> Void in
                         if success {
-                            // save user's last name offline for later use
+                         
                             userDefaults.setObject(userLastName!, forKey: "userLastName")
                             userDefaults.setObject(userFirstName!, forKey: "userFirstName")
                         }
                     })
-                    // removing password from password text field, so when user signs out, he has to enter the password again (for security reasons)
+                   
                     self.passwordTextField.text = ""
                     
                     dispatch_async(dispatch_get_main_queue(), {
@@ -125,7 +125,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    // prevent segue to map if no network
+    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject!) -> Bool {
         if identifier == "toSignUpVCSegue" {
             
@@ -134,7 +134,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 return false
             }
         }
-        // by default, transition
+        
         return true
     }
 }

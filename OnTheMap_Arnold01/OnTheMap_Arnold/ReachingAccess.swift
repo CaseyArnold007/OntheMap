@@ -10,7 +10,7 @@
 
 import SystemConfiguration
 
-//Does the App have a Connection to the Network?
+//Connection to the Network?
 
 public class Reachability {
     class func isConnectedToNetwork() -> Bool {

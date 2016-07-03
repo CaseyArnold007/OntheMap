@@ -40,25 +40,24 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                     
                     for location in StudentLocation.locations {
                         
-                        // Notice that the float values are being used to create CLLocationDegree values.
-                        // This is a version of the Double type.
+                        
                         let lat = CLLocationDegrees(location.latitude!)
                         let long = CLLocationDegrees(location.longitude!)
                         
-                        // The lat and long are used to create a CLLocationCoordinates2D instance.
+                        
                         let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
                         
                         let first = location.firstName!
                         let last = location.lastName!
                         let mediaURL = location.mediaURL!
                         
-                        // Here we create the annotation and set its coordiate, title, and subtitle properties
+                        
                         let annotation = MKPointAnnotation()
                         annotation.coordinate = coordinate
                         annotation.title = "\(first) \(last)"
                         annotation.subtitle = mediaURL
                         
-                        // Finally we place the annotation in an array of annotations.
+                        
                         self.annotations.append(annotation)
                     }
                     
@@ -82,7 +81,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
     }
     
-    // MARK: - MKMapViewDelegate
+    
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
         let reuseId = "pin"
@@ -103,16 +102,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return pinView
     }
     
-    // This delegate method is implemented to respond to taps. It opens the system browser
-    // to the URL specified in the annotationViews subtitle property.
-    func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
         if control == annotationView.rightCalloutAccessoryView {
             performSegueWithIdentifier("fromMapToURLVCSegue", sender: self)
         }
     }
     
-    //MARK: logOutButtonTapped
+    
     @IBAction func logOutButtonTapped(sender: UIBarButtonItem) {
         mapView.alpha = 0.3
         logOutButton.enabled = false
@@ -132,7 +129,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    //MARK: addLocationButtonTapped
+    
     @IBAction func addLocationButtonTapped(sender: UIBarButtonItem) {
         
         if let userLastName = userDefaults.valueForKey("userLastName") as? String {
@@ -156,7 +153,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                     }
                     
                 } else {
-                    // User didn't share a location before
+                    
                     self.editingOldLocation = false
                     dispatch_async(dispatch_get_main_queue(), {
                         self.performSegueWithIdentifier("addFromMapSegue", sender: self)
@@ -167,7 +164,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
-    //MARK: refreshButtonTapped
+    
     @IBAction func refreshButtonTapped(sender: UIBarButtonItem) {
         if Reachability.isConnectedToNetwork() {
             annotations = []
@@ -180,7 +177,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
     }
     
-    //MARK: prepareForSegue
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "fromMapToURLVCSegue" {
             let urlVC = segue.destinationViewController as! URLViewController

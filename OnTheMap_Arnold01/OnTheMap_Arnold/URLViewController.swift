@@ -20,7 +20,7 @@ class URLViewController: UIViewController, UIWebViewDelegate {
         super.viewDidLoad()
         webView.delegate = self
         
-        // check if there is no http:// in the URL and correct it
+        
         if !urlString.lowercaseString.hasPrefix("http") {
             fixedUrlString = "http://" + urlString
         } else {

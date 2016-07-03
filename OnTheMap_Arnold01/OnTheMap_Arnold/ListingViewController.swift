@@ -30,7 +30,7 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
     }
     
-    //MARK: TableView
+    //Table
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -38,7 +38,7 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
         return StudentLocation.locations.count
     }
     
-    //MARK: TableViewDataSource
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // sorting the array based on date locations updated:
@@ -53,7 +53,7 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    //MARK: logOutButtonTapped
+   
     @IBAction func logOutButtonTapped(sender: UIBarButtonItem) {
         tableView.alpha = 0.3
         logOutButton.enabled = false
@@ -72,7 +72,7 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    //MARK: addLocationButtonTapped
+  
     @IBAction func addLocationButtonTapped(sender: UIBarButtonItem) {
         
         if let userLastName = NSUserDefaults.standardUserDefaults().valueForKey("userLastName") as? String {
@@ -95,7 +95,7 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
                     }
                     
                 } else {
-                    // User didn't share a location before
+                  
                     self.editingOldLocation = false
                     dispatch_async(dispatch_get_main_queue(), {
                         self.performSegueWithIdentifier("addFromListSegue", sender: self)
@@ -107,7 +107,7 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    //MARK: refreshButtonTapped
+
     @IBAction func refreshButtonTapped(sender: UIBarButtonItem) {
         
         if Reachability.isConnectedToNetwork() {
@@ -118,7 +118,7 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    //MARK: helper methode to update table
+ 
     func updateLocations() {
         
         self.tableView.alpha = 0.3
@@ -145,7 +145,7 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
-    //MARK: prepareForSegue
+ 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "fromListToURLVCSegue" {
             let urlVC = segue.destinationViewController as! URLViewController
