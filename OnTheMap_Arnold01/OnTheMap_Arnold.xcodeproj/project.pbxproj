@@ -17,7 +17,7 @@
 		86F70C0D1D198E6500470F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F70C0C1D198E6500470F4F /* Assets.xcassets */; };
 		86F70C0F1D198EA200470F4F /* Miscellaneous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F70C0E1D198EA200470F4F /* Miscellaneous.swift */; };
 		86F70C111D198EAE00470F4F /* ReachingAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F70C101D198EAE00470F4F /* ReachingAccess.swift */; };
-		86F70C131D198EBA00470F4F /* StudentLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F70C121D198EBA00470F4F /* StudentLocations.swift */; };
+		86F70C131D198EBA00470F4F /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F70C121D198EBA00470F4F /* StudentLocation.swift */; };
 		86F70C151D198ED200470F4F /* UdacitySite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F70C141D198ED200470F4F /* UdacitySite.swift */; };
 		86F70C1E1D198EF900470F4F /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F70C161D198EF900470F4F /* ListingViewController.swift */; };
 		86F70C1F1D198EF900470F4F /* LocationConfimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F70C171D198EF900470F4F /* LocationConfimationViewController.swift */; };
@@ -64,7 +64,7 @@
 		86F70C0C1D198E6500470F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86F70C0E1D198EA200470F4F /* Miscellaneous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Miscellaneous.swift; sourceTree = "<group>"; };
 		86F70C101D198EAE00470F4F /* ReachingAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachingAccess.swift; sourceTree = "<group>"; };
-		86F70C121D198EBA00470F4F /* StudentLocations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentLocations.swift; sourceTree = "<group>"; };
+		86F70C121D198EBA00470F4F /* StudentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
 		86F70C141D198ED200470F4F /* UdacitySite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacitySite.swift; sourceTree = "<group>"; };
 		86F70C161D198EF900470F4F /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		86F70C171D198EF900470F4F /* LocationConfimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationConfimationViewController.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 				86F70C0A1D198E5600470F4F /* Parse.swift */,
 				86F70C0E1D198EA200470F4F /* Miscellaneous.swift */,
 				86F70C101D198EAE00470F4F /* ReachingAccess.swift */,
-				86F70C121D198EBA00470F4F /* StudentLocations.swift */,
+				86F70C121D198EBA00470F4F /* StudentLocation.swift */,
 				86F70C141D198ED200470F4F /* UdacitySite.swift */,
 			);
 			name = Constants;
@@ -338,7 +338,7 @@
 				86F70C251D198EF900470F4F /* URLViewController.swift in Sources */,
 				86F70C211D198EF900470F4F /* LoginViewController.swift in Sources */,
 				86F70C151D198ED200470F4F /* UdacitySite.swift in Sources */,
-				86F70C131D198EBA00470F4F /* StudentLocations.swift in Sources */,
+				86F70C131D198EBA00470F4F /* StudentLocation.swift in Sources */,
 				86F70C231D198EF900470F4F /* SharingViewController.swift in Sources */,
 				86F70C091D198E4500470F4F /* Constants.swift in Sources */,
 				86F70C1F1D198EF900470F4F /* LocationConfimationViewController.swift in Sources */,

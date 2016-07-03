@@ -32,9 +32,10 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
         
         
         //Checking to see if Location has changed here...
-        print ("Checking Location in Sharing....")
+        print ("Checking Location in Sharing, Change in Location....")
         print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         print (newLocation)
+        print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         
         
         urlStringTextField.delegate = self
@@ -68,6 +69,13 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func submitButtonTapped(sender: UIButton) {
+        
+        //Checking New Location....
+        print ("Button Tapped on Final Submit....")
+        print ("New Location Check...............")
+        print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+        print (newLocation)
+        print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         
         if Reachability.isConnectedToNetwork() {
             newLocation?.mediaURL! = urlStringTextField.text!
@@ -109,7 +117,8 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
                                     dispatch_async(dispatch_get_main_queue(), {
                                         self.dismissViewControllerAnimated(true, completion: { () -> Void in
                                             self.dismissViewControllerAnimated(true, completion: nil)
-                                        })
+    
+                                                                                    })
                                     })
                                     
                                 }

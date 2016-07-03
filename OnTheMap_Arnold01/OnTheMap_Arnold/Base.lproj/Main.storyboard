@@ -386,7 +386,7 @@
                                     <constraint firstAttribute="width" constant="75" id="8V8-7e-CUf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Back">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -527,7 +527,7 @@
                                     <constraint firstAttribute="height" constant="30" id="Gdu-Rq-MPE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Back">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -612,7 +612,7 @@
                                     <constraint firstAttribute="height" constant="30" id="uQP-6c-Kzg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="Back">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>

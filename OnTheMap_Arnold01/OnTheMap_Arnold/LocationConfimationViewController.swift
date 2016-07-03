@@ -97,8 +97,6 @@ class LocationConfirmationViewController: UIViewController, MKMapViewDelegate {
             print ("Break.....")
             print ("Checking Location...")
             print ("XXXXXXXXXXXXXXXXXXXX")
-            print (self.latitude)
-            print (self.longitude)
             print (self.oldLocation)
         }
     }

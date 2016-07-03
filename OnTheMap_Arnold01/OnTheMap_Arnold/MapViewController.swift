@@ -142,7 +142,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                         
                         let alert = UIAlertController(title: "Location & URL Already shared", message: "You shared \(student.mediaURL!) from \(student.mapString!) before, Do you want to Edit your location & URL ?", preferredStyle: UIAlertControllerStyle.Alert)
                         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
-                        alert.addAction(UIAlertAction(title: "Edit Location", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
+                        alert.addAction(UIAlertAction(title: "Edit", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
                             dispatch_async(dispatch_get_main_queue(), {
                                 self.performSegueWithIdentifier("addFromMapSegue", sender: self)
                                 

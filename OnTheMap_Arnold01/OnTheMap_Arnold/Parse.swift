@@ -129,10 +129,12 @@ class Parse {
     
     
     //Updating A Location
+    
+    
     class func updateStudentLocation (old: StudentLocation, new: StudentLocation, didComplete:(success: Bool, status: String?) -> Void) {
         
         let urlString = Constants.ParseBaseLink + ParseMethodNames.StudentLocation
-            //+ "/\(old.objectId!)"
+            
         let url = NSURL(string: urlString)
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "PUT"
