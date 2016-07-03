@@ -70,7 +70,7 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func submitButtonTapped(sender: UIButton) {
         
-        //Checking New Location....
+        //Checking Parameters....
         print ("Break.......")
         print ("Button Tapped on Final Submit....")
         print (newLocation)
@@ -84,6 +84,8 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
                     if success {
                         dispatch_async(dispatch_get_main_queue(), {
                             self.performSegueWithIdentifier("backToListVCSegue", sender: self)
+                            
+                            //print (self.newLocation)
                             
                         })
                         
@@ -117,7 +119,7 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
                                         self.dismissViewControllerAnimated(true, completion: { () -> Void in
                                             self.dismissViewControllerAnimated(true, completion: nil)
     
-                                                                                    })
+                                        })
                                     })
                                     
                                 }

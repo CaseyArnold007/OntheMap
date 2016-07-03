@@ -643,7 +643,7 @@
                     <connections>
                         <outlet property="submitUrlButton" destination="I0N-Lu-sAe" id="PNV-Pj-NEk"/>
                         <outlet property="urlStringTextField" destination="iDp-lf-0xG" id="01P-0R-VcN"/>
-                        <segue destination="5Tx-KQ-akU" kind="show" identifier="backToListVCSegue" id="Lpc-Td-Udk"/>
+                        <segue destination="5Tx-KQ-akU" kind="show" identifier="backToListVCSegue" id="BM2-f6-tA1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58L-gK-jeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -738,8 +738,8 @@
         <image name="Map" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="BM2-f6-tA1"/>
         <segue reference="NHO-PB-MhY"/>
-        <segue reference="Lpc-Td-Udk"/>
         <segue reference="9tf-lG-K6K"/>
     </inferredMetricsTieBreakers>
 </document>
