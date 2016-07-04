@@ -294,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxY-f8-4wb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444" y="413"/>
+            <point key="canvasLocation" x="1347" y="377"/>
         </scene>
         <!--URL View Controller-->
         <scene sceneID="ylL-fg-pm8">
@@ -738,8 +738,8 @@
         <image name="Map" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BM2-f6-tA1"/>
         <segue reference="NHO-PB-MhY"/>
+        <segue reference="BM2-f6-tA1"/>
         <segue reference="9tf-lG-K6K"/>
     </inferredMetricsTieBreakers>
 </document>

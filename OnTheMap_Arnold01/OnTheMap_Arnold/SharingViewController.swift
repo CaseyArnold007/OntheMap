@@ -81,11 +81,16 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
             
             if editingOldLocation {
                 Parse.updateStudentLocation(oldLocation!, new: newLocation!, didComplete: { (success, status) -> Void in
+                    
+                    //Checking Data in Sharing VC
+                    print("Sharing Controller Data:")
+                    print (self.newLocation)
+                    
                     if success {
                         dispatch_async(dispatch_get_main_queue(), {
                             self.performSegueWithIdentifier("backToListVCSegue", sender: self)
                             
-                            //print (self.newLocation)
+                            //self.navigationController?.popToRootViewControllerAnimated(true)
                             
                         })
                         

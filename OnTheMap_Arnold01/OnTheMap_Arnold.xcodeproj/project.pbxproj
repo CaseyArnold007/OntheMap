@@ -12,8 +12,8 @@
 		86E99B6A1CD76588000BE020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E99B681CD76588000BE020 /* LaunchScreen.storyboard */; };
 		86E99B751CD76589000BE020 /* OnTheMap_ArnoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E99B741CD76589000BE020 /* OnTheMap_ArnoldTests.swift */; };
 		86E99B801CD76589000BE020 /* OnTheMap_ArnoldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E99B7F1CD76589000BE020 /* OnTheMap_ArnoldUITests.swift */; };
+		86F2F5EA1D2A24C2006F87EE /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F2F5E91D2A24C2006F87EE /* Parse.swift */; };
 		86F70C091D198E4500470F4F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F70C081D198E4500470F4F /* Constants.swift */; };
-		86F70C0B1D198E5600470F4F /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F70C0A1D198E5600470F4F /* Parse.swift */; };
 		86F70C0D1D198E6500470F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86F70C0C1D198E6500470F4F /* Assets.xcassets */; };
 		86F70C0F1D198EA200470F4F /* Miscellaneous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F70C0E1D198EA200470F4F /* Miscellaneous.swift */; };
 		86F70C111D198EAE00470F4F /* ReachingAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F70C101D198EAE00470F4F /* ReachingAccess.swift */; };
@@ -59,8 +59,8 @@
 		86E99B7B1CD76589000BE020 /* OnTheMap_ArnoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMap_ArnoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E99B7F1CD76589000BE020 /* OnTheMap_ArnoldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMap_ArnoldUITests.swift; sourceTree = "<group>"; };
 		86E99B811CD76589000BE020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86F2F5E91D2A24C2006F87EE /* Parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parse.swift; path = ../../OnTheMapHelp/OnTheMap/Parse.swift; sourceTree = "<group>"; };
 		86F70C081D198E4500470F4F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		86F70C0A1D198E5600470F4F /* Parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
 		86F70C0C1D198E6500470F4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86F70C0E1D198EA200470F4F /* Miscellaneous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Miscellaneous.swift; sourceTree = "<group>"; };
 		86F70C101D198EAE00470F4F /* ReachingAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachingAccess.swift; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 		86E99B991CD765DA000BE020 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				86F2F5E91D2A24C2006F87EE /* Parse.swift */,
 				86F70C081D198E4500470F4F /* Constants.swift */,
-				86F70C0A1D198E5600470F4F /* Parse.swift */,
 				86F70C0E1D198EA200470F4F /* Miscellaneous.swift */,
 				86F70C101D198EAE00470F4F /* ReachingAccess.swift */,
 				86F70C121D198EBA00470F4F /* StudentLocation.swift */,
@@ -332,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86F70C241D198EF900470F4F /* SignInViewController.swift in Sources */,
+				86F2F5EA1D2A24C2006F87EE /* Parse.swift in Sources */,
 				86F70C111D198EAE00470F4F /* ReachingAccess.swift in Sources */,
 				86F70C221D198EF900470F4F /* MapViewController.swift in Sources */,
 				86F70C0F1D198EA200470F4F /* Miscellaneous.swift in Sources */,
@@ -342,7 +343,6 @@
 				86F70C231D198EF900470F4F /* SharingViewController.swift in Sources */,
 				86F70C091D198E4500470F4F /* Constants.swift in Sources */,
 				86F70C1F1D198EF900470F4F /* LocationConfimationViewController.swift in Sources */,
-				86F70C0B1D198E5600470F4F /* Parse.swift in Sources */,
 				86E99B601CD76588000BE020 /* AppDelegate.swift in Sources */,
 				86F70C201D198EF900470F4F /* LocationViewController.swift in Sources */,
 				86F70C1E1D198EF900470F4F /* ListingViewController.swift in Sources */,

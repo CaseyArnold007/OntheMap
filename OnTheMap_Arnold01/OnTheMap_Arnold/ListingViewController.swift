@@ -82,9 +82,9 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
                     if let student = studentLocation {
                         self.oldLocation = student
                         self.editingOldLocation = true
-                        let alert = UIAlertController(title: "Location & URL Already shared", message: "You shared (\(student.mediaURL!)) from (\(student.mapString!)) before, Do you want to Edit your location & URL ?", preferredStyle: UIAlertControllerStyle.Alert)
+                        let alert = UIAlertController(title: "Location & URL Already shared", message: "You shared \(student.mediaURL!) from \(student.mapString!) before, Do you want to Edit your location & URL ?", preferredStyle: UIAlertControllerStyle.Alert)
                         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
-                        alert.addAction(UIAlertAction(title: "Override", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
+                        alert.addAction(UIAlertAction(title: "Edit", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
                             dispatch_async(dispatch_get_main_queue(), {
                                 self.performSegueWithIdentifier("addFromListSegue", sender: self)
                             })
