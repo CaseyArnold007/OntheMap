@@ -144,6 +144,13 @@ class Parse {
         
         request.HTTPBody = "{\"uniqueKey\": \"\(old.uniqueKey!)\", \"firstName\": \"\(new.firstName!)\", \"lastName\": \"\(new.lastName!)\",\"mapString\": \"\(new.mapString!)\", \"mediaURL\": \"\(new.mediaURL!)\",\"latitude\": \(new.latitude!), \"longitude\": \(new.longitude!)}".dataUsingEncoding(NSUTF8StringEncoding)
         
+        
+        //Print Body
+        print ("Break.................")
+        print ("HTTP Body Print.......")
+        print (request.HTTPBody)
+        print ("XXXXXXXXXXXXXXXXXXXXXX")
+        
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request) { data, response, error in
             
@@ -158,7 +165,12 @@ class Parse {
                 parsedResult = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
                 print(NSString(data: data!, encoding: NSUTF8StringEncoding))
                 
-                print(parsedResult)
+                
+                //Printing Parsed result....
+                print ("Break.........")
+                print ("Parsed Result.")
+                print (parsedResult)
+                print ("XXXXXXXXXXXXXX")
                 
                 guard let _ = parsedResult["updatedAt"] as? String else {
                     print("Can't find updatedAt in \(parsedResult!)")
@@ -174,7 +186,6 @@ class Parse {
                 didComplete(success: false, status: "Could not parse the data")
                 return
             }
-            
         }
         task.resume()
         
