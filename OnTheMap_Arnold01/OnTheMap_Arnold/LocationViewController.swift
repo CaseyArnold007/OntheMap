@@ -74,10 +74,10 @@ class LocationViewController: UIViewController, UITextFieldDelegate {
                 
                 
                 //Checking Old Location....
+                print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
                 print ("Break....")
                 print ("Checking in Location Controller....")
                 print (self.oldLocation)
-                print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
                 
             } else {
                 presentMessage(self, title: "No Location", message: "No location typed, Please enter your location and try again", action: "OK")

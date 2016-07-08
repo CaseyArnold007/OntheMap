@@ -35,6 +35,7 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
         print ("Break......")
         print ("Checking Location in Sharing....")
         print (newLocation)
+        print (oldLocation)
         print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         
         
@@ -90,8 +91,6 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
                         dispatch_async(dispatch_get_main_queue(), {
                             self.performSegueWithIdentifier("backToListVCSegue", sender: self)
                             
-                            //self.navigationController?.popToRootViewControllerAnimated(true)
-                            
                         })
                         
                     }
@@ -106,8 +105,8 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
                                 "createdAt" : "",
                                 "firstName" : firstName,
                                 "lastName"  : lastName,
-                                "latitude"  : 1.0,
-                                "longitude" : 1.0,
+                                "latitude"  : (self.latitude),
+                                "longitude" : (self.longitude),
                                 "mapString" : urlString,
                                 "mediaURL"  : urlString,
                                 "objectId"  : "",
@@ -118,14 +117,14 @@ class SharingViewController: UIViewController, UITextFieldDelegate {
                             let locations = StudentLocation.locationsFromResults([locationDict])
                             
                             Parse.addLocation(locations.first!, didComplete: { (success, status) -> Void in
+                                
+                                dispatch_async(dispatch_get_main_queue(), {
+                                    self.performSegueWithIdentifier("backToListVCSegue", sender: self)
+                                    
+                                })
+                                
                                 if success {
                                     print("success")
-                                    dispatch_async(dispatch_get_main_queue(), {
-                                        self.dismissViewControllerAnimated(true, completion: { () -> Void in
-                                            self.dismissViewControllerAnimated(true, completion: nil)
-    
-                                        })
-                                    })
                                     
                                 }
                             })

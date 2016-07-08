@@ -9,6 +9,7 @@
 import Foundation
 
 
+
 class Parse {
     
     //Getting Locations
@@ -70,11 +71,10 @@ class Parse {
             do {
                 parsedResult = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
                 
-                guard let _ = parsedResult["objectId"] as? [[String : AnyObject]] else {
-                    print("Can't find objectId in \(parsedResult!)")
-                    didComplete(success: false, status: "Couldn't find Results")
-                    return
-                }
+                //Printing Add Parsed Result
+                print ("Parse result from Add")
+                print (parsedResult)
+                print ("XXXXXXXXXXXXXXXXXXXXX")
                 
                 didComplete(success: true, status: nil)
                 

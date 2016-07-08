@@ -86,16 +86,20 @@ class LocationConfirmationViewController: UIViewController, MKMapViewDelegate {
  
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toShareLocationVCSegue" {
-            let shareLocationVC = segue.destinationViewController as! SharingViewController
-            shareLocationVC.editingOldLocation = self.editingOldLocation
-            shareLocationVC.locationString = self.locationString
-            shareLocationVC.latitude = self.latitude
-            shareLocationVC.longitude = self.longitude
-            shareLocationVC.oldLocation = self.oldLocation
+            let sharingVC = segue.destinationViewController as! SharingViewController
+            sharingVC.editingOldLocation = self.editingOldLocation
+            sharingVC.locationString = self.locationString
+            sharingVC.latitude = self.latitude
+            sharingVC.longitude = self.longitude
+            sharingVC.oldLocation = self.oldLocation
             
             //Checking to see if Information has processed....
             print ("Break.....")
-            print ("Checking Location Confirmation...")
+            print ("Location Confirmation String")
+            print (self.editingOldLocation)
+            print (self.locationString)
+            print (self.latitude)
+            print (self.longitude)
             print (self.oldLocation)
             print ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
         }

@@ -13,7 +13,7 @@ struct StudentLocation {
     
     
     static var locations: [StudentLocation] = []
-    
+        
     var createdAt: String?
     var firstName: String?
     var lastName: String?
@@ -45,6 +45,7 @@ struct StudentLocation {
         for result in results {
             locations .append(StudentLocation(dictionary: result))
         }
+            
         return locations
     }
     

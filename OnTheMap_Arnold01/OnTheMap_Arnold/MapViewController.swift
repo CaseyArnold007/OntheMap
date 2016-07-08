@@ -108,7 +108,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             performSegueWithIdentifier("fromMapToURLVCSegue", sender: self)
         }
     }
-    
+
     
     @IBAction func logOutButtonTapped(sender: UIBarButtonItem) {
         mapView.alpha = 0.3
@@ -117,7 +117,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         Udacity.logout { (success, status) -> Void in
             if success {
                 dispatch_async(dispatch_get_main_queue(), {
+                    
                     self.dismissViewControllerAnimated(true, completion: nil)
+                    //unwindToLoginViewController:(UIStoryboardSegue*)segue
+                    self.navigationController?.popToRootViewControllerAnimated(true)
+                    
                 })
             } else {
                 dispatch_async(dispatch_get_main_queue(), {
@@ -128,6 +132,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             }
         }
     }
+    
     
     
     @IBAction func addLocationButtonTapped(sender: UIBarButtonItem) {
