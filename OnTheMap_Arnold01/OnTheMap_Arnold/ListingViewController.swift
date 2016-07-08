@@ -97,9 +97,8 @@ class ListingViewController: UIViewController, UITableViewDelegate, UITableViewD
                 } else {
                   
                     self.editingOldLocation = false
-                    dispatch_async(dispatch_get_main_queue(), {
                         self.performSegueWithIdentifier("addFromListSegue", sender: self)
-                    })
+                   
                 }
                 
             })

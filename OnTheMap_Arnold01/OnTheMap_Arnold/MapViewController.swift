@@ -169,9 +169,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 } else {
                     
                     self.editingOldLocation = false
-                    dispatch_async(dispatch_get_main_queue(), {
                         self.performSegueWithIdentifier("addFromMapSegue", sender: self)
-                    })
+                   
                 }
                 
             })
